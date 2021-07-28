@@ -29,16 +29,16 @@ while(1):
     pred = model.predict_classes(x)
     if pred[0] == 2:
         # twilio account ssid
-        account_sid = 'AC4c30a8e1c7127a077cbf05414eb7ef38'
+        account_sid = 'AC4c30a8exxxxxxx'
         # twilo account authentication toke
-        auth_token = 'd22f9b76fffb3403cda21cec95461000'
+        auth_token = 'd22xxxxxxxx'
         client = Client(account_sid, auth_token)
 
         message = client.messages \
             .create(
                 body='Danger!. Wild animal is detected, stay alert',
-                from_=' +12293515154',  # the free number of twilio
-                to='+919149492527')
+                from_=' +12xxxxxxxx',  # the free number of twilio
+                to='+919xxxxxxx')
         print(message.sid)
         print('Danger!!')
         print('Animal Detected')
